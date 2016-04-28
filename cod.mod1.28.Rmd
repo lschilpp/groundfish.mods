@@ -1,0 +1,53 @@
+---
+title: "Cod Models 1.29.16"
+author: "Liberty Schilpp"
+date: "January 28, 2016"
+output: html_document
+---
+###cod models linear models summary 
+-K factor and logweight by age, year, location, season and cohort
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+7+5*(4+3)
+exp(-5*(0.2+0.15))
+(sqrt(1+2*(3+2)))/(log(3^2 + 2))
+#2
+a <- seq(from = 1, to = 99)
+b <-seq(from = 1, to = 99, by = 2)
+c <-rep(1:3, times = 3)#not sure
+d <-rep(-5:-3, times = 3)
+e <-seq(1:10)^-1
+f <-seq(1:6)^3
+#3
+y <- c(3,2,15,-1,22,1,9,17,5)
+y[1]#first value of y
+y[9]#last value of y
+l <- length(y)
+y[l]#last value of vector of length l
+y[y>mean(y)]#values greater than mean
+which(y>mean(y))#indicies of greater than mean
+any(y<0)#this returns that there are some negative values
+any(y==mean(y))#there are no values equal to the mean
+any(y==median(y))#there are values equal to the median
+
+#4
+library(MASS)
+head(hills, n = 5)#displays first 5 hills
+min(hills$time) #displays fastest time
+
+
+
+
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
